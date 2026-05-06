@@ -2,42 +2,142 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Agencia Digital</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <title>DevSolutions | Agencia Digital</title>
+     
+     <header class="header">
+        <div class="logo">DevSolutions</div>
 
-    <header>
-        <h1>DevSolutions</h1>
-        <nav>
-            <a href="#">Inicio</a>
+        <nav class="nav" id="nav">
+            <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#testimonios">Clientes</a>
             <a href="#contacto">Contacto</a>
         </nav>
+
+        <div class="menu-btn" id="menu-btn">
+            ☰
+        </div>
     </header>
 
-    <section class="hero">
-        <h2>Desarrollo Web Profesional</h2>
-        <p>Creando experiencias digitales modernas</p>
-        <button onclick="scrollToSection()">Ver más</button>
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <span class="badge">AGENCIA DIGITAL</span>
+
+            <h1>
+                Creamos páginas web modernas
+                para potenciar negocios.
+            </h1>
+
+            <p>
+                Diseño UI/UX, desarrollo web profesional,
+                optimización y experiencias digitales.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="primary-btn" onclick="scrollToSection()">
+                    Explorar Servicios
+                </button>
+
+                <button class="secondary-btn">
+                    Ver Portfolio
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <div class="circle"></div>
+
+            <div class="card-glass">
+                <h3>+120</h3>
+                <p>Proyectos realizados</p>
+            </div>
+        </div>
     </section>
 
-    <section id="servicios" class="servicios">
-        <div class="card">Diseño Web</div>
-        <div class="card">Desarrollo Frontend</div>
-        <div class="card">Optimización</div>
+    <section class="stats">
+        <div class="stat-item">
+            <h2>98%</h2>
+            <p>Satisfacción</p>
+        </div>
+
+        <div class="stat-item">
+            <h2>24/7</h2>
+            <p>Soporte</p>
+        </div>
+
+        <div class="stat-item">
+            <h2>5+</h2>
+            <p>Años de experiencia</p>
+        </div>
     </section>
 
-    <section id="contacto" class="contacto">
-        <h2>Contacto</h2>
-        <input type="text" placeholder="Nombre">
-        <input type="email" placeholder="Email">
-        <button>Enviar</button>
+    </section>
+
+    <section class="testimonios" id="testimonios">
+
+        <div class="section-title">
+            <span>CLIENTES</span>
+            <h2>Opiniones reales</h2>
+        </div>
+
+        <div class="testimonial-container">
+
+            <div class="testimonial reveal">
+                <p>
+                    “Excelente trabajo, la página quedó rápida,
+                    moderna y muy profesional.”
+                </p>
+
+                <h4>— Martín López</h4>
+            </div>
+
+            <div class="testimonial reveal">
+                <p>
+                    “Muy buena atención y diseño increíble.
+                    Recomiendo totalmente.”
+                </p>
+
+                <h4>— Sofía Ramírez</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contacto" id="contacto">
+
+        <div class="section-title light">
+            <span>CONTACTO</span>
+            <h2>Trabajemos juntos</h2>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+
+            <input type="text" placeholder="Tu nombre" required>
+
+            <input type="email" placeholder="Tu email" required>
+
+            <textarea placeholder="Contanos tu proyecto"></textarea>
+
+            <button type="submit" class="primary-btn">
+                Enviar mensaje
+            </button>
+
+        </form>
+
     </section>
 
     <footer>
-        <p>© 2026 - Julián Reyes</p>
+        <h3>DevSolutions</h3>
+        <p>
+            © 2026 - Julián Reyes | Desarrollo Web Frontend
+        </p>
     </footer>
+
+    <button id="scrollTop" class="scroll-top">
+        ↑
+    </button>
 
     <script src="script.js"></script>
 </body>
