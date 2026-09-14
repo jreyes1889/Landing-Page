@@ -6,8 +6,14 @@ function scrollToSection() {
 
 }
 
+function scrollToProyectos() {
 
-// MENU RESPONSIVE
+    document.getElementById('proyectos').scrollIntoView({
+        behavior: 'smooth'
+    });
+
+}
+
 
 const menuBtn = document.getElementById('menu-btn');
 const nav = document.getElementById('nav');
@@ -18,8 +24,17 @@ menuBtn.addEventListener('click', () => {
 
 });
 
+// Cierra el menú mobile al elegir una sección
+nav.querySelectorAll('a').forEach((link) => {
 
-// ANIMACIONES AL HACER SCROLL
+    link.addEventListener('click', () => {
+
+        nav.classList.remove('active');
+
+    });
+
+});
+
 
 const revealElements = document.querySelectorAll('.reveal');
 
@@ -48,15 +63,13 @@ window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
 
 
-// BOTON SCROLL TOP
-
 const scrollTopBtn = document.getElementById('scrollTop');
 
 window.addEventListener('scroll', () => {
 
     if (window.scrollY > 300) {
 
-        scrollTopBtn.style.display = 'block';
+        scrollTopBtn.style.display = 'flex';
 
     } else {
 
@@ -77,8 +90,6 @@ scrollTopBtn.addEventListener('click', () => {
 
 });
 
-
-// FORMULARIO
 
 const form = document.getElementById('contactForm');
 

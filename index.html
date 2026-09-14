@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevSolutions | Agencia Digital</title>
@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/estilos.css">
-     
-<head>     
-    
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
     <header class="header">
         <div class="logo">DevSolutions</div>
 
@@ -48,7 +48,7 @@
                     Explorar Servicios
                 </button>
 
-                <button class="secondary-btn">
+                <button class="secondary-btn" onclick="scrollToProyectos()">
                     Ver Portfolio
                 </button>
             </div>
@@ -80,6 +80,119 @@
             <p>Años de experiencia</p>
         </div>
     </section>
+
+    <section class="servicios" id="servicios">
+
+        <div class="section-title">
+            <span>SERVICIOS</span>
+            <h2>En qué podemos ayudarte</h2>
+        </div>
+
+        <div class="cards-container">
+
+            <div class="card">
+                <div class="icon">🎨</div>
+                <h3>Diseño UI/UX</h3>
+                <p>
+                    Interfaces claras y atractivas, pensadas para que
+                    tus usuarios encuentren lo que buscan sin fricción.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Desarrollo Web</h3>
+                <p>
+                    Sitios y aplicaciones a medida, construidos con
+                    tecnologías modernas y código mantenible.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🚀</div>
+                <h3>Optimización</h3>
+                <p>
+                    Mejoramos la velocidad de carga y el rendimiento
+                    para que tu página se sienta siempre rápida.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🛠️</div>
+                <h3>Soporte y Mantenimiento</h3>
+                <p>
+                    Acompañamiento continuo: actualizaciones, mejoras
+                    y resolución de problemas cuando los necesites.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="proyectos" id="proyectos">
+
+        <div class="section-title">
+            <span>PROYECTOS</span>
+            <h2>Trabajos recientes</h2>
+        </div>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-image project-image--blue">
+                    <span>SportShop</span>
+                </div>
+                <div class="project-content">
+                    <h3>SportShop — E-commerce</h3>
+                    <p>
+                        API backend para una tienda de indumentaria deportiva,
+                        con gestión de productos, usuarios y pedidos.
+                    </p>
+                    <div class="project-tags">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image project-image--purple">
+                    <span>Landing Corporativa</span>
+                </div>
+                <div class="project-content">
+                    <h3>Landing Corporativa</h3>
+                    <p>
+                        Página institucional responsive con secciones de
+                        servicios, testimonios y formulario de contacto.
+                    </p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image project-image--teal">
+                    <span>Gestor de Tareas</span>
+                </div>
+                <div class="project-content">
+                    <h3>Gestor de Tareas</h3>
+                    <p>
+                        Aplicación para organizar tareas por estado con
+                        persistencia de datos y filtros dinámicos.
+                    </p>
+                    <div class="project-tags">
+                        <span>JavaScript</span>
+                        <span>API REST</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
     </section>
 
@@ -123,11 +236,11 @@
 
         <form id="contactForm" class="contact-form">
 
-            <input type="text" placeholder="Tu nombre" required>
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
 
-            <input type="email" placeholder="Tu email" required>
+            <input type="email" name="email" placeholder="Tu email" required>
 
-            <textarea placeholder="Contanos tu proyecto"></textarea>
+            <textarea name="mensaje" placeholder="Contanos tu proyecto" required></textarea>
 
             <button type="submit" class="primary-btn">
                 Enviar mensaje
@@ -144,7 +257,7 @@
         </p>
     </footer>
 
-    <button id="scrollTop" class="scroll-top">
+    <button id="scrollTop" class="scroll-top" aria-label="Volver arriba">
         ↑
     </button>
 
